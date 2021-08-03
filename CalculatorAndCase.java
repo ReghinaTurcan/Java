@@ -1,3 +1,4 @@
+///CalculatorAPP
 import java.util.Scanner;
 public class CalculatorAPP {
 //main
@@ -78,3 +79,67 @@ class UI{
 		}
 	} 
 }
+////////////DrawCakeWithForApp
+import java.util.Scanner; 
+public class DrawCakeWithForApp {
+	    public static void main(String[] args) {
+	       final int SMOKE  = 1; 
+	       final int FIRE   = 2; 
+	       final int CANDLE = 3; 
+	       final int CREAM  = 4; 
+	       final int BASE   = 5; 	 
+	       String width;
+	       Scanner in = new Scanner(System.in);
+	       System.out.print("Insert width cake: " );
+	       width = in.next();
+	    // while (width.equals(a) ){
+	     
+	      for(int level=1; level<=5;level++) {
+	           switch(level) {
+	               case SMOKE: 
+	            	   for(int lines=1; lines<=2;lines++) {
+	            		   for(int elements =1; elements <=5; elements++) {
+	            			   System.out.print(" .");
+	            		   }
+            	    System.out.println(" ");
+	            	   } 
+	            	   break; 
+	            	   
+	               case FIRE: 
+	            	   for(int lines=1; lines<=1;lines++) {
+	            		   for(int elements =1; elements <=5; elements++) {
+	            			   System.out.print(" ^");
+	            		   }
+            	    System.out.println(" ");
+	            	   }
+	            	   break;
+	              
+	               case CANDLE: 
+	            	   for(int lines=1; lines<=1;lines++) {
+	            		   for(int elements =1; elements <=5; elements++) {
+	            			   System.out.print(" |");
+	            		   }
+            	    System.out.println(" ");
+	            	   }
+	            	   break;
+            	   
+	               case CREAM: 
+	            	   for(int lines4=1; lines4<=1;lines4++) {
+	            		   for(int elements =1; elements <=11; elements++) {
+	            			   System.out.print("~");
+	            		   }
+            	    System.out.println(" ");
+            	  }
+	            	   break;  
+	               case BASE: 
+	                    for(int lines=1; lines<=3; lines++) {
+	                        for(int elements=1; elements<=11; elements++) {
+	                            System.out.print("#") ;  
+	                        } 
+	                     System.out.println(" ");
+	                    
+	                     }  
+	               break;} 
+	              } 
+	    }
+	  }
