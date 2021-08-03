@@ -1,8 +1,7 @@
 import java.util.Scanner;
 public class CalculatorAPP {
 //main
-	public static void main(String[] args) {
-		 
+	public static void main(String[] args) { 
 		while (true)
 		{UI.renderMenu();
 		int a = UI.ScanInt();
@@ -22,8 +21,12 @@ public class CalculatorAPP {
 			r = Aritmetics.div(a, b);
 		}
 		UI.renderResult(a, b, op, r);
-		}	
+		int co = UI.ScanContinue();
+		if (co==0) {
+			break;
+		}
 	}
+			}
 
 //secundary classes
 class Aritmetics {
@@ -50,7 +53,7 @@ class UI{
 		System.out.println("|        insert number        |");
 		System.out.println("|        and choose ops:      |");
 		System.out.println("|        +,-,/,*              |");
-		System.out.println("-------------------------------");	
+		System.out.println("-------------------------------");
 	}
 	static int ScanInt() {
 		Scanner in = new Scanner(System.in);
@@ -67,6 +70,11 @@ class UI{
 	static void renderResult(int a, int b,char op, int r) {
 		System.out.println(a + " " + op + " " + b + " =  "+ r);
 	}
-    }
-  }
-
+	static int ScanContinue() {
+		Scanner in = new Scanner(System.in);
+		System.out.print("You will continue? ( 1 - yes, 0 - no ): ");
+		int co =in.nextInt();
+		return co;
+		}
+	} 
+}
