@@ -88,10 +88,10 @@ public class DrawCakeWithForApp {
 	       final int CANDLE = 3; 
 	       final int CREAM  = 4; 
 	       final int BASE   = 5; 	 
-	       Scanner in = new Scanner(System.in);
+	       Scanner scan = new Scanner(System.in);
 	       System.out.print("Insert width cake: " );
-	       char w =in.next().charAt(0);
-	     
+		int number = scan.nextInt();   
+	      
 	      for(int level=1; level<=5;level++) {
 	           switch(level) {
 	               case SMOKE: 
@@ -105,7 +105,7 @@ public class DrawCakeWithForApp {
 	            	   
 	               case FIRE: 
 	            	   for(int lines=1; lines<=1;lines++) {
-	            		   for(int elements =1; elements <=5; elements++) {
+	            		   for(int elements =1; elements <= 5; elements++) {
 	            			   System.out.print(" ^");
 	            		   }
             	    System.out.println(" ");
@@ -120,10 +120,9 @@ public class DrawCakeWithForApp {
             	    System.out.println(" ");
 	            	   }
 	            	   break;
-            	   
 	               case CREAM: 
 	            	   for(int lines4=1; lines4<=1;lines4++) {
-	            		   for(int elements =1; elements <=w; elements++) {
+	            		   for(int elements =1; elements <=number; elements++) {
 	            			   System.out.print("~");
 	            		   }
             	    System.out.println(" ");
@@ -131,13 +130,14 @@ public class DrawCakeWithForApp {
 	            	   break;  
 	               case BASE: 
 	                    for(int lines=1; lines<=3; lines++) {
-	                        for(int elements=1; elements<=w; elements++) {
+	                        for(int elements=1; elements <=number; elements++) {
 	                            System.out.print("#") ;  
 	                        } 
 	                     System.out.println(" ");
 	                    
 	                     }  
 	               break;} 
-	              } 
+	              }  
+	      scan.close();
 	    }
 	  }
