@@ -2,7 +2,7 @@
 import java.util.Scanner;
   public class DataFlowApp {
       public static void main(String[] args) {
-    	  DataTransformer.SelectConvertion();
+    	  Viws.ViewR();
     	  Scanner in = new Scanner(System.in);
     	  System.out.print("Select convertion: ");
     	  int value1 =in.nextInt();
@@ -49,18 +49,21 @@ import java.util.Scanner;
     		  System.out.println(DataTransformer.doubleToShort(value));
       }	
   }
-  // secondary class
-  class DataTransformer {
-	  static void SelectConvertion() {
+      class Viws{
+    	  static void ViewR() {
 			System.out.println("Convertion List");
 			System.out.println(" 1. integerToByte()\r\n"
 					+ " 2. byteToInteger()\r\n"
 					+ " 3. doubleToInteger()\r\n"
 					+ " 4. integerToDouble()\r\n"
 					+ " 5. shortToInteger()\r\n"
-					+ " 6. integerToShort()"
+					+ " 6. integerToShort()\r\n"
 					+ " 7. doubleToShort()");	
 	  }
+      }
+  // secondary class
+  class DataTransformer {
+
 	  static int integerToByte(int value) {
 		 byte bb = (byte) value;
 		 return bb;
