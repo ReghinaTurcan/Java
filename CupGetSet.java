@@ -51,7 +51,7 @@ public class Cup {
 				return liquidVolume;
 			}
 				public void setLiquidVolume(int liquidVolume) {
-					if (this.liquidVolume <=600 || this.liquidVolume <0 ) {
+					if (liquidVolume <=600 || liquidVolume <0 ) {
 						this.liquidVolume = liquidVolume;
 					}else {
 						System.err.println("Eror");
